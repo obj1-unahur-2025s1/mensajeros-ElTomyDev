@@ -1,0 +1,15 @@
+import destinos.*
+import mensajeros.*
+import paquete.*
+import transportes.*
+
+
+describe "Algunas Situaciones" {
+    test "Roberto puede llever un paquete pago" {
+        assert.that(brooklyn.puedeEntrar(roberto) or matrix.puedeEntrar(roberto))
+    }
+
+    test "Neo no puede llevar un paquete no pago"{
+        assert.notThat(matrix.puedeEntrar(neo))
+    }
+}
