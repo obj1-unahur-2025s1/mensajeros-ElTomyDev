@@ -2,6 +2,6 @@ object paquete {
 
     var pago = false
 
-    method pago() = pago
-    method pago(unPago) = pago = unPago
+    method estaPago() = pago
+    method cambiarPago(valor) {pago = valor}
 }

@@ -6,12 +6,12 @@ import transportes.*
 
 describe "Algunas Situaciones" {
     test "Roberto puede llever un paquete pago" {
-        roberto.paquete().pago(true)
-        assert.that(brooklyn.puedeEntrar(roberto) or matrix.puedeEntrar(roberto))
+        roberto.paquete().cambiarPago(true)
+        assert.that(neo.puedeEntregar(roberto.paquete(), brooklyn))
     }
 
     test "Neo no puede llevar un paquete no pago"{
-        neo.paquete().pago(false)
-        assert.notThat(matrix.puedeEntrar(neo))
+        neo.paquete().cambiarPago(false)
+        assert.notThat(neo.puedeEntregar(neo.paquete(), matrix))
     }
 }
